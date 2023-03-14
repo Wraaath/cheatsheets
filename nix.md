@@ -21,3 +21,25 @@ Why do I write descriptions for these?
 Nix-store garbage collection.
 <br />
 `nix-store --gc`
+<br />
+<br />
+
+### Searching for packages
+???
+<br />
+<br />
+Using the NixOS website.
+<br />
+`search.nixos.org`
+<br />
+<br />
+Using nix search.
+<br />
+`nix search firefox` <br />
+! Experimental feature !
+<br />
+<br />
+Using nix-env.
+<br />
+`nix-env -qaP`
+<br />
