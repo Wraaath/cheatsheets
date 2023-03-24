@@ -1,5 +1,5 @@
 # Docker cheatsheet
-Just for docker... <br />
+General-purpose commands and guides <br />
 Remember `sudo` !
 <br />
 <br />
@@ -7,16 +7,17 @@ Remember `sudo` !
 ### General purpose commands
 General purpose command
 <br />
-<br />
 List running containers.
 <br />
 `sudo docker ps`
 <br />
+`sudo docker start container-name`
+<br />
+`sudo docker stop container-name`
 <br />
 
 ### Docker-Compose
-I use this alot.
-<br />
+A way to declare a configuration for your docker deployment.
 <br />
 Getting started...
 <br />
@@ -39,7 +40,6 @@ Start the container in the background with "-d"
 
 ### Examples for docker-compose
 This example is for a Nginx-webserver. A custom index.html file can be provided in a "html"-folder in the same directory.
-<br />
 <br />
 ```docker
 version: '3'
