@@ -10,12 +10,12 @@ General purpose command
 <br />
 List running containers.
 <br />
-`docker ps`
+`sudo docker ps`
 <br />
 <br />
 Deploy/redploy container in directory from compose file. 
 <br />
-`docker-compose up -d`
+`sudo docker-compose up -d`
 <br />
 <br />
 
@@ -37,8 +37,20 @@ Use any text-editor, in this example it's `nvim`.
 <br />
 <br />
 
-### YAML-file formatting for Docker
-YAML kinda sucks.
+### Examples for docker-compose
+This example is for a Nginx-webserver. A custom index.html file can be provided in a "html"-folder in the same directory.
 <br />
 <br />
-Stuff
+```docker
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+```
+<br />
+<br />
