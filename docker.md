@@ -13,11 +13,6 @@ List running containers.
 `sudo docker ps`
 <br />
 <br />
-Deploy/redploy container in directory from compose file. 
-<br />
-`sudo docker-compose up -d`
-<br />
-<br />
 
 ### Docker-Compose
 I use this alot.
@@ -34,6 +29,11 @@ Inside the containers directory, make your Docker Compose-file. <br />
 Use any text-editor, in this example it's `nvim`.
 <br />
 `nvim docker-compose.yml`
+<br />
+<br />
+Start the container in the background with "-d"
+<br />
+`sudo docker-compose up -d`
 <br />
 <br />
 
