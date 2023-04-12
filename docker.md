@@ -1,5 +1,5 @@
 # Docker cheatsheet
-Just for docker... <br />
+General-purpose commands and guides <br />
 Remember `sudo` !
 <br />
 <br />
@@ -7,21 +7,17 @@ Remember `sudo` !
 ### General purpose commands
 General purpose command
 <br />
-<br />
 List running containers.
 <br />
-`docker ps`
+`sudo docker ps`
 <br />
+`sudo docker start container-name`
 <br />
-Deploy/redploy container in directory from compose file. 
-<br />
-`docker-compose up -d`
-<br />
+`sudo docker stop container-name`
 <br />
 
 ### Docker-Compose
-I use this alot.
-<br />
+A way to declare a configuration for your docker deployment.
 <br />
 Getting started...
 <br />
@@ -36,9 +32,25 @@ Use any text-editor, in this example it's `nvim`.
 `nvim docker-compose.yml`
 <br />
 <br />
+Start the container in the background with "-d"
+<br />
+`sudo docker-compose up -d`
+<br />
+<br />
 
-### YAML-file formatting for Docker
-YAML kinda sucks.
+### Examples for docker-compose
+This example is for a Nginx-webserver. A custom index.html file can be provided in a "html"-folder in the same directory.
+<br />
+```docker
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./html:/usr/share/nginx/html
+```
 <br />
 <br />
-Stuff
